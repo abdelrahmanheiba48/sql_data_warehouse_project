@@ -75,14 +75,14 @@ CREATE TABLE bronze.erp_LOC_A101(
 );
 PRINT '>> Done: bronze.erp_LOC_A101 created successfully';
 GO
-PRINT '>> Creating table: bronze.PX_CAT_G1V2';
+PRINT '>> Creating table: bronze.erp_PX_CAT_G1V2';
 
-DROP TABLE IF EXISTS bronze.PX_CAT_G1V2;
-CREATE TABLE bronze.PX_CAT_G1V2(
+DROP TABLE IF EXISTS bronze.erp_PX_CAT_G1V2;
+CREATE TABLE bronze.erp_PX_CAT_G1V2(
 	ID NVARCHAR(50),
 	CAT NVARCHAR(50),
 	SUBCAT NVARCHAR(50),
 	MAINTENANCE NVARCHAR(50)
 );
-PRINT '>> Done: bronze.PX_CAT_G1V2 created successfully';
+PRINT '>> Done: bronze.erp_PX_CAT_G1V2 created successfully';
 GO
