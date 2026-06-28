@@ -33,7 +33,7 @@ CREATE TABLE bronze.crm_prd_info(
 	prd_key NVARCHAR(50),
 	prd_nm NVARCHAR(50),
 	prd_cost DECIMAL(10,2),
-	prd_line CHAR(1),
+	prd_line VARCHAR(5),
 	prd_start_dt DATE,
 	prd_end_dt DATE
 );
@@ -47,9 +47,9 @@ CREATE TABLE bronze.crm_sales_details(
 	sls_ord_num NVARCHAR(50),
 	sls_prd_key NVARCHAR(50),
 	sls_cust_id NVARCHAR(50),
-	sls_order_dt DATETime2,
-	sls_ship_dt DATETime2,
-	sls_due_dt DATETime2,
+	sls_order_dt INT,
+	sls_ship_dt DATE,
+	sls_due_dt DATE,
 	sls_sales DECIMAL(10,2),
 	sls_quantity INT,
 	sls_price DECIMAL(10,2)
