@@ -20,8 +20,9 @@ BEGIN
 			FIELDTERMINATOR = ',' ,
 			TABLOCK
 		);
+
 		SET @END_TIME = GETDATE();
-		PRINT'##LOAD DURATION FOR bronze.crm_cust_info IS'+CAST(DATEDIFF(SECOND,@START_TIME , @END_TIME)AS NVARCHAR)+'SECONDS' ;
+		PRINT'##LOAD DURATION FOR bronze.crm_cust_info IS'+' '+CAST(DATEDIFF(SECOND,@START_TIME , @END_TIME)AS NVARCHAR)+' '+'SECONDS' ;
 
 		PRINT'==============================================================';
 		SET @START_TIME = GETDATE();
@@ -37,7 +38,7 @@ BEGIN
 			FIELDTERMINATOR = ','
 		);
 		SET @END_TIME = GETDATE();
-		PRINT'##LOAD DURATION FOR bronze.crm_prd_info IS'+CAST(DATEDIFF(SECOND,@START_TIME , @END_TIME)AS NVARCHAR)+'SECONDS' ;
+		PRINT'##LOAD DURATION FOR bronze.crm_prd_info IS'+' '+CAST(DATEDIFF(SECOND,@START_TIME , @END_TIME)AS NVARCHAR)+' '+'SECONDS' ;
 
 		PRINT'==============================================================';
 
@@ -54,7 +55,7 @@ BEGIN
 			FIELDTERMINATOR = ','
 		);
 		SET @END_TIME = GETDATE();
-		PRINT'##LOAD DURATION FOR bronze.crm_sales_details IS'+CAST(DATEDIFF(SECOND,@START_TIME , @END_TIME)AS NVARCHAR)+'SECONDS' ;
+		PRINT'##LOAD DURATION FOR bronze.crm_sales_details IS'+' '+CAST(DATEDIFF(SECOND,@START_TIME , @END_TIME)AS NVARCHAR)+' '+'SECONDS' ;
 
 		PRINT'==============================================================';
 		SET @START_TIME = GETDATE();
@@ -70,7 +71,7 @@ BEGIN
 			FIELDTERMINATOR = ','
 		);
 		SET @END_TIME = GETDATE();
-		PRINT'##LOAD DURATION FOR bronze.erp_CUST_AZ12 IS'+CAST(DATEDIFF(SECOND,@START_TIME , @END_TIME)AS NVARCHAR)+'SECONDS' ;
+		PRINT'##LOAD DURATION FOR bronze.erp_CUST_AZ12 IS'+' '+CAST(DATEDIFF(SECOND,@START_TIME , @END_TIME)AS NVARCHAR)+' '+'SECONDS' ;
 
 		PRINT'==============================================================';
 		SET @START_TIME = GETDATE();
@@ -86,7 +87,7 @@ BEGIN
 			FIELDTERMINATOR = ','
 		);
 		SET @END_TIME = GETDATE();
-		PRINT'##LOAD DURATION FOR bronze.erp_LOC_A101 IS'+CAST(DATEDIFF(SECOND,@START_TIME , @END_TIME)AS NVARCHAR)+'SECONDS' ;
+		PRINT'##LOAD DURATION FOR bronze.erp_LOC_A101 IS'+' '+CAST(DATEDIFF(SECOND,@START_TIME , @END_TIME)AS NVARCHAR)+' '+'SECONDS' ;
 
 		PRINT'==============================================================';
 		SET @START_TIME = GETDATE();
@@ -102,13 +103,13 @@ BEGIN
 			FIELDTERMINATOR = ','
 		)
 		SET @END_TIME = GETDATE();
-		PRINT'##LOAD DURATION FOR bronze.erp_PX_CAT_G1V2 IS'+CAST(DATEDIFF(SECOND,@START_TIME , @END_TIME)AS NVARCHAR)+'SECONDS' ;
+		PRINT'##LOAD DURATION FOR bronze.erp_PX_CAT_G1V2 IS'+' '+CAST(DATEDIFF(SECOND,@START_TIME , @END_TIME)AS NVARCHAR)+' '+'SECONDS' ;
 
 		PRINT'==============================================================';
 		SET @PROC_END_TIME = GETDATE();
 		PRINT'==============================================================';
 		PRINT'THE BRONZE LAYER LODING IS COMPLETED...';
-		PRINT'THE TOTAL TIME OF THE LODING IS:'+ CAST(DATEDIFF(SECOND,@PROC_START_TIME,@PROC_END_TIME) AS NVARCHAR)+'SECONDS'  ;
+		PRINT'THE TOTAL TIME OF THE LODING IS:'+' '+ CAST(DATEDIFF(SECOND,@PROC_START_TIME,@PROC_END_TIME) AS NVARCHAR)+' '+'SECONDS'  ;
 	END TRY
 	BEGIN CATCH
 		PRINT'==============================================================';
