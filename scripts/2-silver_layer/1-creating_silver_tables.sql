@@ -16,8 +16,8 @@ CREATE TABLE silver.crm_cust_info(
 	cst_key NVARCHAR(50),
 	cst_firstname NVARCHAR(50),
 	cst_lastname NVARCHAR(50),
-	cst_marital_status CHAR(1),
-	cst_gndr CHAR(1),
+	cst_marital_status NVARCHAR(50),
+	cst_gndr NVARCHAR(50),
 	cst_create_date DATE,
 	dwh_create_date DATETIME2 DEFAULT GETDATE()
 );
@@ -27,12 +27,13 @@ PRINT '>> Creating table: silver.crm_prd_info';
 DROP TABLE IF EXISTS silver.crm_prd_info;
 CREATE TABLE silver.crm_prd_info(
 	prd_id INT,
+	cat_id NVARCHAR(50),
 	prd_key NVARCHAR(50),
 	prd_nm NVARCHAR(50),
 	prd_cost DECIMAL(10,2),
-	prd_line VARCHAR(5),
-	prd_start_dt DATE,
-	prd_end_dt DATE,
+	prd_line NVARCHAR(50),
+	prd_start_dt DATETIME2,
+prd_end_dt DATETIME2,
 	dwh_create_date DATETIME2 DEFAULT GETDATE()
 );
 PRINT '>> Done: silver.crm_prd_info created successfully';
@@ -83,5 +84,3 @@ CREATE TABLE silver.erp_PX_CAT_G1V2(
 );
 PRINT '>> Done: silver.erp_PX_CAT_G1V2 created successfully';
 GO
-
-
