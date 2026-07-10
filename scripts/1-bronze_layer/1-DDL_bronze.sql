@@ -1,14 +1,14 @@
--- ============================================
--- DDL Script: Bronze Layer Tables
--- Purpose:    Create all raw staging tables
--- ============================================
-USE DataWarehouse
-GO
--- ============================================
--- Table: bronze.crm_cust_info
--- Source: CRM System
--- Description: Raw customer information
--- ============================================
+/*
+===============================================================================
+DDL Script: Create Bronze Tables
+===============================================================================
+Script Purpose:
+    This script creates tables in the 'bronze' schema, dropping existing tables 
+    if they already exist.
+	  Run this script to re-define the DDL structure of 'bronze' Tables
+===============================================================================
+*/
+
 PRINT '>> Creating table: bronze.crm_cust_info';
 
 DROP TABLE IF EXISTS bronze.crm_cust_info;
